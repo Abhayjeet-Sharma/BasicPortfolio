@@ -1,0 +1,88 @@
+.desktopScene {
+  display: block;
+}
+
+.mobileWrap {
+  display: none;
+}
+
+.iconGrid {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6%;
+  align-content: center;
+  justify-items: center;
+  padding: 6%;
+}
+
+.iconButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--green-bright);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 0.6rem;
+  border-radius: 4px;
+  transition: text-shadow 160ms ease, transform 120ms ease;
+}
+
+.iconButton:hover,
+.iconButton:focus-visible {
+  text-shadow: 0 0 10px rgba(120, 255, 160, 0.85), 0 0 22px rgba(120, 255, 160, 0.4);
+  transform: translateY(-2px);
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--green-bright);
+  outline-offset: 3px;
+}
+
+.iconDisabled {
+  color: var(--ink-dim);
+  cursor: not-allowed;
+}
+
+.iconDisabled:hover,
+.iconDisabled:focus-visible {
+  text-shadow: none;
+  transform: none;
+}
+
+.mobileIconGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .desktopScene {
+    display: none;
+  }
+
+  .mobileWrap {
+    display: block;
+    min-height: 100dvh;
+    padding: 5rem 1.2rem 3rem;
+    background: radial-gradient(ellipse at top, #0a1a10 0%, #050906 60%);
+  }
+
+  .mobileEyebrow {
+    margin: 0 0 1.2rem;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--green-bright);
+  }
+
+  .mobileIconGrid .iconButton {
+    border: 1px solid var(--green-line);
+    border-radius: 6px;
+    padding: 1.1rem 0.6rem;
+  }
+}
