@@ -25,7 +25,7 @@ export const skillScreens: SkillScreen[] = [
   {
     id: "backend",
     label: "Backend",
-    items: ["Node.js", "Express", "REST APIs"],
+    items: ["Node.js", "Express", "REST APIs","JWT"," bcrypt", "RBAC"],
     left: 24.64,
     top: 39.32,
     width: 12.38,
@@ -34,7 +34,7 @@ export const skillScreens: SkillScreen[] = [
   {
     id: "frontend",
     label: "Frontend",
-    items: ["React", "Next.js","HTML","CSS","Figma"],
+    items: ["React", "Next.js","HTML5","CSS","Figma","Tailwind CSS"],
     left: 41.21,
     top: 43.25,
     width: 17.52,
@@ -43,7 +43,7 @@ export const skillScreens: SkillScreen[] = [
   {
     id: "databases",
     label: "Databases",
-    items: ["PostgreSQL", "PostGIS", "MongoDB","MySQL"],
+    items: ["PostgreSQL", "PostGIS", "MongoDB","MySQL","Supabase"],
     left: 63.04,
     top: 39.21,
     width: 12.44,
