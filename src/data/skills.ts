@@ -16,7 +16,7 @@ export const skillScreens: SkillScreen[] = [
   {
     id: "languages",
     label: "Languages",
-    items: ["C++", "JavaScript", "TypeScript", "Python"],
+    items: ["C++","Java","C", "JavaScript", "TypeScript", "Python"],
     left: 5.86,
     top: 45.27,
     width: 15.13,
@@ -34,7 +34,7 @@ export const skillScreens: SkillScreen[] = [
   {
     id: "frontend",
     label: "Frontend",
-    items: ["React", "Next.js"],
+    items: ["React", "Next.js","HTML","CSS","Figma"],
     left: 41.21,
     top: 43.25,
     width: 17.52,
@@ -43,7 +43,7 @@ export const skillScreens: SkillScreen[] = [
   {
     id: "databases",
     label: "Databases",
-    items: ["PostgreSQL", "PostGIS", "MongoDB"],
+    items: ["PostgreSQL", "PostGIS", "MongoDB","MySQL"],
     left: 63.04,
     top: 39.21,
     width: 12.44,
@@ -52,7 +52,7 @@ export const skillScreens: SkillScreen[] = [
   {
     id: "tools",
     label: "Tools",
-    items: ["Git", "Docker", "Postman"],
+    items: ["Git", "Docker", "Postman","Github","VS code"],
     left: 79.13,
     top: 45.27,
     width: 15.07,
