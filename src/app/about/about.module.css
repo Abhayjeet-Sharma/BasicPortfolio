@@ -9,9 +9,10 @@
 .dossier {
   position: absolute;
   top: 50%;
-  right: 15%;
+  right: 1%;
   transform: translateY(-50%);
-  width: 44%;
+  width: 45%;
+  height:90%;
   min-width: 260px;
   padding: 1.6rem 1.7rem;
   background: rgba(3, 8, 5, 0.6);
@@ -46,7 +47,7 @@
   font-size: 0.9rem;
   line-height: 1.7;
   color: var(--ink);
-  max-width: 46ch;
+  width: 100%;
 }
 
 .fields {

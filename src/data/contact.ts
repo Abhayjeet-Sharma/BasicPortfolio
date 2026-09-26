@@ -8,7 +8,7 @@ export type ContactLink = {
 };
 
 export const contactLinks: ContactLink[] = [
-  { id: "email", label: "Email", url: "abhayjeetsharma@outlook.com" }, // e.g. "mailto:you@example.com"
+  { id: "email", label: "Email", url: "mailto:abhayjeetsharma@outlook.com" }, // e.g. "mailto:you@example.com"
   { id: "github", label: "GitHub", url: "https://github.com/Abhayjeet-Sharma" }, // e.g. "https://github.com/yourhandle"
   { id: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/abhayjeet-sharma" }, // e.g. "https://linkedin.com/in/yourhandle"
   { id: "resume", label: "Resume", url: "/TheBestestCV.pdf" }, // e.g. "/resume.pdf"

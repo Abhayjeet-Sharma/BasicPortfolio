@@ -65,29 +65,55 @@ export default function ProjectsView({ variant }: { variant: "desktop" | "mobile
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const selected = projects.find((p) => p.id === selectedId) ?? null;
 
-  return (
-    <div className={variant === "desktop" ? styles.listWrap : styles.mobileListWrap}>
-      {variant === "desktop" && <p className={styles.listEyebrow}>Case files</p>}
+  return variant === "desktop" ? (
+  <div className={styles.desktopLayer}>
+    <div className={styles.listWrap}>
+      <p className={styles.listEyebrow}>Case files</p>
       <ul className={styles.list}>
         {projects.map((project) => (
           <li key={project.id}>
             <button
-              className={`${styles.listItem} ${selectedId === project.id ? styles.listItemActive : ""}`}
-              onClick={() => setSelectedId(selectedId === project.id ? null : project.id)}
+              className={`${styles.listItem} ${
+                selectedId === project.id ? styles.listItemActive : ""
+              }`}
+              onClick={() =>
+                setSelectedId(selectedId === project.id ? null : project.id)
+              }
               aria-expanded={selectedId === project.id}
             >
               {project.name}
             </button>
-            {variant === "mobile" && selectedId === project.id && (
-              <ProjectDetail project={project} onClose={() => setSelectedId(null)} />
-            )}
           </li>
         ))}
       </ul>
-
-      {variant === "desktop" && selected && (
-        <ProjectDetail project={selected} onClose={() => setSelectedId(null)} />
-      )}
     </div>
-  );
+
+    {selected && (
+      <ProjectDetail project={selected} onClose={() => setSelectedId(null)} />
+    )}
+  </div>
+) : (
+  <div className={styles.mobileListWrap}>
+    <ul className={styles.list}>
+      {projects.map((project) => (
+        <li key={project.id}>
+          <button
+            className={`${styles.listItem} ${
+              selectedId === project.id ? styles.listItemActive : ""
+            }`}
+            onClick={() =>
+              setSelectedId(selectedId === project.id ? null : project.id)
+            }
+            aria-expanded={selectedId === project.id}
+          >
+            {project.name}
+          </button>
+          {selectedId === project.id && (
+            <ProjectDetail project={project} onClose={() => setSelectedId(null)} />
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 }
